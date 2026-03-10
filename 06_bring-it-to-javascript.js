@@ -50,7 +50,7 @@ let cart = [
 
 // Consolelog
 console.log("Product List: ", productList);
-console.log("ProductA: ",products_A);
+console.log("ProductA: ",[products_A_01, products_A_02]);
 console.log("Cart: ",cart);
 
 
