@@ -2,26 +2,30 @@
 let productList =["adidas_evo_001", "adidas_evo_002", "adidas_pro4_001", "adidas_pro4_002",]
 
 // Product Data
-const products_A ={
+const products_A_01 ={
     productId: "adidas_evo_001",
     productName: "Adidas EvoSL White",
-    price: 5800
+    price: 5800,
+    inStock: true
   }
 
-  const products_B ={
+  const products_A_02 ={
     productId: "adidas_evo_002",
     productName: "Adidas EvoSL Black",
-    price: 5800
+    price: 5800,
+    inStock: true
   }
- const products_C = {
+ const products_B_01 = {
     productId: "adidas_pro4_001",
     productName: "Adidas Adios Pro 4 White",
-    price: 9500
+    price: 9500,
+    inStock: true
   }
- const products_D = {
+ const products_B_02 = {
     productId: "adidas_pro4_002",
     productName: "Adidas Adios Pro 4 Pink",
-    price: 9500
+    price: 9500,
+    inStock: true
   }
 
 //Cart Data
