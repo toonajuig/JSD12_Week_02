@@ -1,0 +1,51 @@
+{
+  "type": "excalidraw",
+  "version": 2,
+  "source": "https://marketplace.visualstudio.com/items?itemName=pomdtr.excalidraw-editor",
+  "elements": [
+    {
+      "id": "2MlGjMgf4C6pGAxRIXUwn",
+      "type": "text",
+      "x": 141,
+      "y": 163,
+      "width": 228.9598388671875,
+      "height": 150,
+      "angle": 0,
+      "strokeColor": "#1e1e1e",
+      "backgroundColor": "transparent",
+      "fillStyle": "solid",
+      "strokeWidth": 2,
+      "strokeStyle": "solid",
+      "roughness": 1,
+      "opacity": 100,
+      "groupIds": [],
+      "frameId": null,
+      "index": "a0",
+      "roundness": null,
+      "seed": 633619867,
+      "version": 91,
+      "versionNonce": 234264827,
+      "isDeleted": false,
+      "boundElements": null,
+      "updated": 1773116535778,
+      "link": null,
+      "locked": false,
+      "text": "User Persona\n+\nUser Journey (optional)\n+\nUse Case Diagram\n",
+      "fontSize": 20,
+      "fontFamily": 5,
+      "textAlign": "left",
+      "verticalAlign": "top",
+      "containerId": null,
+      "originalText": "User Persona\n+\nUser Journey (optional)\n+\nUse Case Diagram\n",
+      "autoResize": true,
+      "lineHeight": 1.25
+    }
+  ],
+  "appState": {
+    "gridSize": 20,
+    "gridStep": 5,
+    "gridModeEnabled": false,
+    "viewBackgroundColor": "#ffffff"
+  },
+  "files": {}
+}
