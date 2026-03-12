@@ -1,17 +1,15 @@
 -- =========================
 -- 1) CREATE DATABASE
 -- =========================
-CREATE DATABASE ecommerce_shoes;
-
--- ใช้งาน database นี้
--- PostgreSQL ใช้คำสั่ง:
--- \c ecommerce_shoes
+-- Create the database once before running this file:
+-- CREATE DATABASE ecommerce_adidas;
+-- Then connect to it and run the table definitions below.
 
 
 -- =========================
 -- 2) CATEGORIES TABLE
 -- =========================
-CREATE TABLE categories (
+CREATE TABLE IF NOT EXISTS categories (
     category_id SERIAL PRIMARY KEY,
     category_name VARCHAR(100) NOT NULL UNIQUE
 );
@@ -20,7 +18,7 @@ CREATE TABLE categories (
 -- =========================
 -- 3) PRODUCTS TABLE
 -- =========================
-CREATE TABLE products (
+CREATE TABLE IF NOT EXISTS products (
     product_id VARCHAR(50) PRIMARY KEY,
     product_name VARCHAR(255) NOT NULL,
     price INT NOT NULL CHECK (price > 0),
@@ -41,7 +39,7 @@ CREATE TABLE products (
 -- =========================
 -- 4) USERS TABLE
 -- =========================
-CREATE TABLE users (
+CREATE TABLE IF NOT EXISTS users (
     user_id SERIAL PRIMARY KEY,
     full_name VARCHAR(150) NOT NULL,
     email VARCHAR(255) NOT NULL UNIQUE,
@@ -54,9 +52,9 @@ CREATE TABLE users (
 
 -- =========================
 -- 5) CART TABLE
--- ผู้ใช้ 1 คน มี 1 cart ได้
+-- One user can have one cart
 -- =========================
-CREATE TABLE carts (
+CREATE TABLE IF NOT EXISTS carts (
     cart_id SERIAL PRIMARY KEY,
     user_id INT NOT NULL UNIQUE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -71,9 +69,9 @@ CREATE TABLE carts (
 
 -- =========================
 -- 6) CART ITEMS TABLE
--- รายการสินค้าในตะกร้า
+-- Items stored in each cart
 -- =========================
-CREATE TABLE cart_items (
+CREATE TABLE IF NOT EXISTS cart_items (
     cart_item_id SERIAL PRIMARY KEY,
     cart_id INT NOT NULL,
     product_id VARCHAR(50) NOT NULL,
@@ -98,7 +96,7 @@ CREATE TABLE cart_items (
 -- =========================
 -- 7) ORDERS TABLE
 -- =========================
-CREATE TABLE orders (
+CREATE TABLE IF NOT EXISTS orders (
     order_id SERIAL PRIMARY KEY,
     user_id INT NOT NULL,
     total_amount INT NOT NULL CHECK (total_amount >= 0),
@@ -116,9 +114,9 @@ CREATE TABLE orders (
 
 -- =========================
 -- 8) ORDER ITEMS TABLE
--- รายการสินค้าแต่ละ order
+-- Items for each order
 -- =========================
-CREATE TABLE order_items (
+CREATE TABLE IF NOT EXISTS order_items (
     order_item_id SERIAL PRIMARY KEY,
     order_id INT NOT NULL,
     product_id VARCHAR(50) NOT NULL,
